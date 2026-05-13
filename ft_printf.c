@@ -6,7 +6,7 @@
 /*   By: apinho-a <apinho-a@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/11 17:14:04 by apinho-a          #+#    #+#             */
-/*   Updated: 2026/05/11 20:54:12 by apinho-a         ###   ########.fr       */
+/*   Updated: 2026/05/13 15:34:42 by apinho-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ int	ft_printf(const char *formatter, ...)
 			formatter_count--;
 			ft_formatter_check(*formatter, args);
 		}
+		else
+			ft_putchar_fd(*formatter, 1);
 		formatter++;
 	}
 	
@@ -72,5 +74,6 @@ int	ft_printf(const char *formatter, ...)
 
 int	main ()
 {
-	ft_printf("%d", 1);
+	ft_printf("abc%d\n", 1);
+	printf("abc%d", 1);
 }
