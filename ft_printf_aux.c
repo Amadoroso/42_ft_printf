@@ -6,7 +6,7 @@
 /*   By: apinho-a <apinho-a@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/11 19:51:42 by apinho-a          #+#    #+#             */
-/*   Updated: 2026/05/14 13:38:43 by apinho-a         ###   ########.fr       */
+/*   Updated: 2026/05/14 13:43:13 by apinho-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,11 @@ int	ft_putnbr_hex(unsigned int n, int fd, char choice)
 
 	if (choice == 'h')
 		hex = "0123456789abcdef";
-	else if (choice == 'H')
+	else
 		hex = "0123456789ABCDEF";
 	count = 0;
 	if (n > 16)
-		count += ft_putnbr_hex((n / 16), fd, hex);
+		count += ft_putnbr_hex((n / 16), fd, choice);
 	count += ft_putchar_fd(hex[n % 16], fd);
 	return (count);
 }
