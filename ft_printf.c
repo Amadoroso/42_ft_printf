@@ -6,7 +6,7 @@
 /*   By: apinho-a <apinho-a@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/11 17:14:04 by apinho-a          #+#    #+#             */
-/*   Updated: 2026/05/13 21:59:23 by apinho-a         ###   ########.fr       */
+/*   Updated: 2026/05/14 13:34:14 by apinho-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,9 @@ static int	ft_pointer_printer(unsigned long long address)
 	}
 	return (count);
 }
+
 static int	ft_formatter_check(char formatter, va_list args)
-{	
+{
 	int	count;
 
 	count = 0;
@@ -42,9 +43,9 @@ static int	ft_formatter_check(char formatter, va_list args)
 	else if (formatter == 'u')
 		count = ft_putnbr_unsigned_fd(va_arg(args, unsigned int), 1);
 	else if (formatter == 'x')
-		count = ft_putnbr_hex(va_arg(args, unsigned int), 1, "0123456789abcdef");
+		count = ft_putnbr_hex(va_arg(args, unsigned int), 1, 'h');
 	else if (formatter == 'X')
-		count = ft_putnbr_hex(va_arg(args, unsigned int), 1, "0123456789ABCDEF");
+		count = ft_putnbr_hex(va_arg(args, unsigned int), 1, 'H');
 	else if (formatter == '%')
 		count = ft_putchar_fd('%', 1);
 	else
@@ -71,14 +72,14 @@ int	ft_printf(const char *formatter, ...)
 		else
 		{
 			ft_putchar_fd(*formatter, 1);
-			count++;			
+			count++;
 		}
 		formatter++;
 	}
 	return (va_end(args), count);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	char			*z;
 	char			*y;
@@ -215,4 +216,4 @@ int	main(void)
 	ft_printf("My own %X\n", ben10 + 10 * 2);
 	ft_printf("My own %X\n", 'a');
 	ft_printf("My own %X\n\n", 14 / 2 * (12 / 7));
-}
+} */
