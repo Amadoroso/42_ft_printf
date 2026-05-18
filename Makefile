@@ -6,7 +6,7 @@
 #    By: apinho-a <apinho-a@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/11 17:11:14 by apinho-a          #+#    #+#              #
-#    Updated: 2026/05/18 18:32:53 by apinho-a         ###   ########.fr        #
+#    Updated: 2026/05/18 18:35:40 by apinho-a         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,4 +42,4 @@ re: fclean all
 test: $(NAME)
 	$(CC) $(CFLAGS) -g $(NAME)
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re test
