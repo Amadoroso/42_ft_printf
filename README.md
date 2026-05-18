@@ -54,7 +54,7 @@ The project utilizes the `stdarg.h` macros (`va_start`, `va_arg`, `va_copy`, `va
 
 ### **References**
 
-- **C Variadic Functions**:[GeekForGeek Variadic Function](https://www.geeksforgeeks.org/c/variadic-functions-in-c/)
+- **C Variadic Functions**: [GeekForGeek Variadic Function](https://www.geeksforgeeks.org/c/variadic-functions-in-c/)
 
 ### **LLM Usage Disclosure**
 
